@@ -19,7 +19,7 @@ export async function main(ns) {
 	var serverManager = false
 	var vservers
 	var vtmp
-//	if (false) { brutessh(); ftpcrack(); relaysmtp(); httpworm(); sqlinject() }
+	if (false) { brutessh(); ftpcrack(); relaysmtp(); httpworm(); sqlinject() }
 
 	const checkM = (c, d) => eval(c < ns.getPlayer().money / d)
 	const arraySort = (arr) => arr.sort((a, b) => b[0] - a[0])
