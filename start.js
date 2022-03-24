@@ -20,6 +20,7 @@ export async function main(ns) {
 			}
 		}
 	}
+	ns.tail()
 	while(true) {
 		ns.clearLog()
 		await scanServers('', 'home')
