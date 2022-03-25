@@ -1,0 +1,12 @@
+alias -g sc="scan-analyze";
+alias -g scm="sc 3";
+wget https://raw.githubusercontent.com/jebril76/Bitburner/main/start.js 00ls.js;
+wget https://raw.githubusercontent.com/jebril76/Bitburner/main/contract.js contract.js;
+wget https://raw.githubusercontent.com/jebril76/Bitburner/main/share.js share.js;
+wget https://raw.githubusercontent.com/jebril76/Bitburner/main/find.js find.js;
+wget https://raw.githubusercontent.com/jebril76/Bitburner/main/jeb.js jeb.js;
+wget https://raw.githubusercontent.com/jebril76/Bitburner/main/abuy.js ator.js;
+wget https://raw.githubusercontent.com/jebril76/Bitburner/main/abuy.js abuy.js;
+wget https://raw.githubusercontent.com/jebril76/Bitburner/main/abuy.js ast.js;
+run share.js;
+run ast.js;
