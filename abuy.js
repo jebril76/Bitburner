@@ -3,9 +3,6 @@ export async function main(ns) {
 	let exes = ['brutessh', 'ftpcrack', 'relaysmtp', 'httpworm', 'sqlinject', 'DeepscanV1', 'DeepscanV2', 'Autolink', 'ServerProfiler']
 	ns.tprint('AutoBuy started.')
 	while(true) {
-		if (ns.purchaseTor()) {
-			ns.tprint('Aquired Tor!')
-		}
 		if (!ns.fileExists(exes[0] + '.exe')){
 			if (ns.purchaseProgram(exes[0] + '.exe')) {
 				ns.tprint('Aquired ' + exes[0] + '!')
