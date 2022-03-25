@@ -4,4 +4,5 @@ export async function main(ns) {
   }
   ns.tprint('Aquired Tor!')
   await ns.write('tor.txt', '', 'w')
+  await ns.asleep(1000)
 }
