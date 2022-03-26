@@ -2,7 +2,7 @@
 //WIP
 export async function main(ns) {
 	let bado = ['CSEC','avmnite-02h','I.I.I.I','run4theh111z', 'The-Cave']
-	for (let bd in bado) {
+	for (let target of bado) {
 		let path = ['home']
 		let deepth = 0
 		let done=false
@@ -14,8 +14,8 @@ export async function main(ns) {
 					path[deepth] = server
 					ns.connect(server)
 					if (host != server) {
-						if (server == bd) {
-							ns.tprint('Backdoor to ' + bd)
+						if (server == target) {
+							ns.tprint('Backdoor to ' + target)
 							await ns.installBackdoor()
 							done=true
 						}
