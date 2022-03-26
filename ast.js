@@ -6,7 +6,7 @@ export async function main(ns) {
 	let tor=false
 	let nram = Math.pow(2, 7-2*singlvl)
 	if (ns.getServerMaxRam('home') > nram ){
-		i = 0
+		let i = 0
 		while (ns.fileExists(exes[i] + '.exe')){
 			i++
 		}
