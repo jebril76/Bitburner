@@ -32,4 +32,5 @@ export async function main(ns) {
 		}
 		await scanServers('', 'home')
 	}
+	ns.connect('home')
 }
