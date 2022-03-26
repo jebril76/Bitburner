@@ -20,7 +20,7 @@ export async function main(ns) {
 				}
 			}
 			else {
-				ns.tprint('Autobuy stopped!')
+				ns.tprint('Autobuy done!')
 				break;
 			}
 		}
