@@ -4,13 +4,15 @@ export async function main(ns) {
 	let singlvl = 1
 	let nram = Math.pow(2, 7-2*singlvl)
 	if (ns.getServerMaxRam('home') > nram ){
-		ns.run('btor.js')
-		if (!ns.fileExists('tor.txt')){
+		if (!ns.fileExists('BruteSSH.exe')){
+			ns.tprint('AutoTor started!')
 			ns.run('ator.js')
+			while(ns.getRunningScript('ator.js')){
+				await ns.asleep(1000)
+			}
+			ns.tprint('AutoTor Done!')
 		}
-		else {
-			ns.run('abuy.js')
-		}
+		ns.run('abuy.js')
 	}
 	else {
 		ns.tprint('Need ' + 2*nram + ' Ram!')
