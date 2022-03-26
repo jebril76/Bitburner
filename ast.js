@@ -12,7 +12,9 @@ export async function main(ns) {
 			}
 			ns.tprint('AutoTor Done!')
 		}
-		ns.run('abuy.js')
+		if (!ns.fileExists('ServerProfiler.exe')){
+			ns.run('abuy.js')
+		}
 	}
 	else {
 		ns.tprint('Need ' + 2*nram + ' Ram!')
