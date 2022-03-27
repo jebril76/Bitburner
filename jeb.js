@@ -2,7 +2,7 @@
 export async function main(ns) {
 	ns.disableLog('ALL')
 	var vserverspeed=5 //lower= lower money reserver.
-	var namelength = 16 //max 27
+	var namelength = 18
 	var files = ['grow.script', 'weak.script', 'hack.script']
 	await ns.write(files[0], 'grow(args)', 'w')
 	await ns.write(files[1], 'weaken(args)', 'w')
@@ -25,7 +25,7 @@ export async function main(ns) {
 	const checkM = (c, d) => eval(c < ns.getPlayer().money / d)
 	const arraySort = (arr) => arr.sort((a, b) => b[0] - a[0])
 	function str(s) { 
-		if (s.length > 6) { 
+		if (s.length > namelength) { 
 			return s.substring(0, namelength) + '...' 
 		} else { 
 			return s 
@@ -70,18 +70,18 @@ export async function main(ns) {
 		ns.clearLog()
 		tmp = targets.slice(0, 12)
 		for (let t of tmp) {
-			ns.print(`¦ ${act[t[1]]} ¦ ${str(t[1])}` + `${ns.nFormat(info('MA', t[1]) / info('MM', t[1]), '0%')} / ${ns.nFormat(info('SL', t[1]) / info('MSL', t[1]), '0%')} `.padStart(31 - str(t[1]).length))
+			ns.print(` ${act[t[1]]} ${str(t[1])}` + `${ns.nFormat(info('MA', t[1]) / info('MM', t[1]), '0%')} / ${ns.nFormat(info('SL', t[1]) / info('MSL', t[1]), '0%')} `.padStart(31 - str(t[1]).length))
 		}
 		tmp = ''
 		if (serverManager) {
 			if (ns.getPurchasedServers().length == 25) {
-				tmp += ' ¦ ' + vservers[0] + "/" + Math.log2(vservers[1])
+				tmp += ' SER: ' + vservers[0] + "/" + Math.log2(vservers[1])
 			}
 			else {
-				tmp += ' ¦ P ' + ns.getPurchasedServers().length
+				tmp += ' SER: ' + ns.getPurchasedServers().length
 			}
 		}
-		ns.print(`¦ ${exes.length} ¦ ${hosts.length} ¦ ${targets.length}` + tmp)
+		ns.print(`EXE: ${exes.length} HOS: ${hosts.length} TAR: ${targets.length}` + tmp)
 	}
 
 	async function scanServers(host, current) {
