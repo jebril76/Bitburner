@@ -12,7 +12,7 @@ export async function main(ns) {
 			i++
 		}
 		if (i<exes.length-1){
-			ns.run('test.js')
+			ns.run('dev.js')
 			ns.tprint('AutoTor started!')
 			ns.run('ator.js')
 			while(ns.getRunningScript('ator.js')){
