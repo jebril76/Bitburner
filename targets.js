@@ -2,10 +2,11 @@
 export async function main(ns) {
 	ns.disableLog('ALL')
 	var targets
+	var namelength = 18
 	const arraySort = (arr) => arr.sort((a, b) => b[0] - a[0])
 	function str(s) { 
-		if (s.length > 6) { 
-			return s.substring(0, 6) + '...' 
+		if (s.length > namelength) { 
+			return s.substring(0, namelength) + '...' 
 		} else { 
 			return s 
 		} 
@@ -33,7 +34,7 @@ export async function main(ns) {
 	function log() {
 		ns.clearLog()
 		for (let t of targets) {
-			ns.print(`¦ ${str(t[1])}` + `${ns.nFormat(info('MA', t[1]) / info('MM', t[1]), '0%')} / ${ns.nFormat(info('SL', t[1]) / info('MSL', t[1]), '0%')} `.padStart(21 - str(t[1]).length))
+			ns.print(`${str(t[1])}` + `${ns.nFormat(info('MA', t[1])/info('MM', t[1]), '0%')} / ${ns.nFormat(info('SL', t[1]) / info('MSL', t[1]), '0%')} `.padStart(31 - str(t[1]).length))
 		}
 	}
 	async function scanServers(host, current) {
