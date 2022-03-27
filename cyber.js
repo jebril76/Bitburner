@@ -1,5 +1,4 @@
 /** @param {NS} ns **/
-//WIP
 export async function main(ns) {
 	let bado = ['CSEC','avmnite-02h','I.I.I.I','run4theh111z', 'The-Cave']
 	for (let target of bado) {
