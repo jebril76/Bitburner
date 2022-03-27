@@ -2,6 +2,7 @@
 export async function main(ns) {
 	ns.disableLog('ALL')
 	var vserverspeed=5 //lower= lower money reserver.
+	var namelength = 16 /max 27
 	var files = ['grow.script', 'weak.script', 'hack.script']
 	await ns.write(files[0], 'grow(args)', 'w')
 	await ns.write(files[1], 'weaken(args)', 'w')
@@ -25,7 +26,7 @@ export async function main(ns) {
 	const arraySort = (arr) => arr.sort((a, b) => b[0] - a[0])
 	function str(s) { 
 		if (s.length > 6) { 
-			return s.substring(0, 6) + '...' 
+			return s.substring(0, namelength) + '...' 
 		} else { 
 			return s 
 		} 
@@ -69,7 +70,7 @@ export async function main(ns) {
 		ns.clearLog()
 		tmp = targets.slice(0, 12)
 		for (let t of tmp) {
-			ns.print(`¦ ${act[t[1]]} ¦ ${str(t[1])}` + `${ns.nFormat(info('MA', t[1]) / info('MM', t[1]), '0%')} / ${ns.nFormat(info('SL', t[1]) / info('MSL', t[1]), '0%')} `.padStart(21 - str(t[1]).length))
+			ns.print(`¦ ${act[t[1]]} ¦ ${str(t[1])}` + `${ns.nFormat(info('MA', t[1]) / info('MM', t[1]), '0%')} / ${ns.nFormat(info('SL', t[1]) / info('MSL', t[1]), '0%')} `.padStart(11 - str(t[1]).length))
 		}
 		tmp = ''
 		if (serverManager) {
