@@ -70,7 +70,7 @@ export async function main(ns) {
 		ns.clearLog()
 		tmp = targets.slice(0, 12)
 		for (let t of tmp) {
-			ns.print(` ${act[t[1]]} ${str(t[1])}` + `${ns.nFormat(info('MA', t[1]) / info('MM', t[1]), '0%')} / ${ns.nFormat(info('SL', t[1]) / info('MSL', t[1]), '0%')} `.padStart(31 - str(t[1]).length))
+			ns.print(`${act[t[1]]} ${str(t[1])}` + `${ns.nFormat(info('MA', t[1]) / info('MM', t[1]), '0%')} / ${ns.nFormat(info('SL', t[1]) / info('MSL', t[1]), '0%')} `.padStart(31 - str(t[1]).length))
 		}
 		tmp = ''
 		if (serverManager) {
