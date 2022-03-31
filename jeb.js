@@ -3,10 +3,10 @@ export async function main(ns) {
 	ns.disableLog('ALL')
 	var vserverspeed=5 //lower= lower money reserver.
 	var namelength = 18
-	var files = ['grow.script', 'weak.script', 'hack.script']
-	await ns.write(files[0], 'grow(args)', 'w')
-	await ns.write(files[1], 'weaken(args)', 'w')
-	await ns.write(files[2], 'hack(args)', 'w')
+ 	var files = ['grow.js', 'weak.js', 'hack.js']
+	await ns.write(files[0], '/** @param {NS} ns **/ export async function main(ns) {await ns.grow(ns.args[0])}', 'w')
+	await ns.write(files[1], '/** @param {NS} ns **/ export async function main(ns) {await ns.weaken(ns.args[0])}', 'w')
+	await ns.write(files[2], '/** @param {NS} ns **/ export async function main(ns) {await ns.hack(ns.args[0])}', 'w')
 	var exclude = [''] 
 	var servers
 	var hosts
